@@ -4,7 +4,7 @@ import socket
 socket.setdefaulttimeout(180)
 
 # read the list of proxy IPs in proxyList
-proxyList = ['103.255.30.249:80', '202.5.17.76:8080',"77.241.235.52:80"] # there are two sample proxy ip
+proxyList = ['103.255.30.249:80', '202.5.17.76:8080',"77.241.235.52:555555"] # there are two sample proxy ip
 
 def is_bad_proxy(pip):    
     try:        
@@ -12,7 +12,7 @@ def is_bad_proxy(pip):
         opener = urllib.request.build_opener(proxy_handler)
         opener.addheaders = [('User-agent', 'Mozilla/5.0')]
         urllib.request.install_opener(opener)
-        req=urllib.request.Request('https://www.google.com')  # change the url address here
+        req=urllib.request.Request('https://www.facebook.com')  # change the url address here
         sock=urllib.request.urlopen(req)
 
     except urllib.request.HTTPError as e:
